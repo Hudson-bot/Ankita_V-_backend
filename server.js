@@ -12,10 +12,11 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: "https://your-netlify-site.netlify.app",  // Replace with your actual frontend URL
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
+  origin: "https://ankita-val.netlify.app",  // Replace with your real Netlify URL
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
 }));
+
 app.use(express.json());
 
 // Routes
